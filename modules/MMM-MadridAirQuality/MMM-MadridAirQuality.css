@@ -1,0 +1,19 @@
+.madrid-air-quality {
+	min-width: 150px;
+}
+
+.madrid-air-quality-station {
+	margin-bottom: 6px;
+	font-size: 0.85em;
+}
+
+.madrid-air-quality-row {
+	display: flex;
+	justify-content: space-between;
+	gap: 18px;
+}
+
+.madrid-air-quality-updated {
+	margin-top: 6px;
+	font-size: 0.65em;
+}
