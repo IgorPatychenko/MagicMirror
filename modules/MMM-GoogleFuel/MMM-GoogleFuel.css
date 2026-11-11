@@ -21,6 +21,8 @@
 	display: flex;
 	justify-content: space-between;
 	gap: 16px;
+	font-size: 0.7em;
+	line-height: 1.15;
 }
 
 .google-fuel-updated {
