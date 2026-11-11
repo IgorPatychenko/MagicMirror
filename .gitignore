@@ -56,12 +56,15 @@ Temporary Items
 
 # Ignore all modules
 /modules/*
-!/modules/MMM-MadridAirQuality/
-!/modules/MMM-MadridAirQuality/**
+!/modules/MMM-GoogleAirQuality/
+!/modules/MMM-GoogleAirQuality/**
 !/modules/MMM-MadridTraffic/
 !/modules/MMM-MadridTraffic/**
+!/modules/MMM-GoogleTraffic/
+!/modules/MMM-GoogleTraffic/**
 
 # Ignore users config files but keep the samples.
+config/config.env
 !config/config.js.sample
 !config/custom.css.sample
 

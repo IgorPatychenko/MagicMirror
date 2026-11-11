@@ -1,4 +1,4 @@
-Module.register("MMM-MadridAirQuality", {
+Module.register("MMM-GoogleAirQuality", {
 	defaults: {
 		latitude: 40.4168,
 		longitude: -3.7038,
@@ -21,7 +21,7 @@ Module.register("MMM-MadridAirQuality", {
 	},
 
 	getStyles () {
-		return ["MMM-MadridAirQuality.css"];
+		return ["MMM-GoogleAirQuality.css"];
 	},
 
 	socketNotificationReceived (notification, payload) {
@@ -33,7 +33,7 @@ Module.register("MMM-MadridAirQuality", {
 
 	getDom () {
 		const wrapper = document.createElement("div");
-		wrapper.className = "madrid-air-quality";
+		wrapper.className = "google-air-quality";
 
 		if (!this.airData) {
 			wrapper.textContent = this.errorMessage || "Consultando estaciones…";
@@ -41,15 +41,15 @@ Module.register("MMM-MadridAirQuality", {
 		}
 
 		const station = document.createElement("div");
-		station.className = "madrid-air-quality-station";
+		station.className = "google-air-quality-station";
 		station.textContent = this.airData.station;
 		wrapper.appendChild(station);
 
 		const measurements = document.createElement("div");
-		measurements.className = "madrid-air-quality-values";
+		measurements.className = "google-air-quality-values";
 		for (const item of this.airData.measurements) {
 			const row = document.createElement("div");
-			row.className = "madrid-air-quality-row";
+			row.className = "google-air-quality-row";
 			const label = document.createElement("span");
 			label.textContent = item.label;
 			const value = document.createElement("span");
@@ -60,8 +60,8 @@ Module.register("MMM-MadridAirQuality", {
 		wrapper.appendChild(measurements);
 
 		const footer = document.createElement("div");
-		footer.className = "madrid-air-quality-updated dimmed";
-		footer.textContent = `Hora del dato: ${this.airData.checkedAt} · Modelo CAMS · Open-Meteo`;
+		footer.className = "google-air-quality-updated dimmed";
+		footer.textContent = `Hora del dato: ${this.airData.checkedAt} · Google Air Quality API`;
 		wrapper.appendChild(footer);
 		return wrapper;
 	}

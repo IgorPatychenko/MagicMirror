@@ -111,7 +111,7 @@ const config = {
 			}
 		},
 		{
-			module: "MMM-MadridAirQuality",
+			module: "MMM-GoogleAirQuality",
 			position: "bottom_right",
 			header: "Calidad del aire · Madrid",
 			config: {
@@ -121,12 +121,17 @@ const config = {
 			}
 		},
 		{
-			module: "MMM-MadridTraffic",
+			module: "MMM-GoogleTraffic",
 			position: "bottom_left",
-			header: "Avisos de tráfico · Madrid",
+			header: "Tráfico · Madrid",
 			config: {
-				maximumEntries: 3,
-				updateInterval: 5 * 60 * 1000
+				apiKey: "${GOOGLE_MAPS_API_KEY}",
+				latitude: 40.35263049999083,
+				longitude: -3.7022814781506397,
+				zoom: 11,
+				darkMode: true,
+				width: "420px",
+				height: "320px"
 			}
 		}
 	]

@@ -1,0 +1,6 @@
+.google-traffic-map {
+  min-width: 240px;
+  max-width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
