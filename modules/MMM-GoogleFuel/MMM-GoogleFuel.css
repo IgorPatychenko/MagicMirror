@@ -20,9 +20,20 @@
 .google-fuel-price {
 	display: flex;
 	justify-content: space-between;
+	align-items: baseline;
 	gap: 16px;
 	font-size: 0.7em;
 	line-height: 1.15;
+}
+
+.google-fuel-price-details {
+	display: flex;
+	align-items: baseline;
+	gap: 6px;
+}
+
+.google-fuel-price-updated {
+	font-size: 0.75em;
 }
 
 .google-fuel-updated {

@@ -78,11 +78,26 @@ Module.register("MMM-GoogleFuel", {
 					row.className = "google-fuel-price";
 					const label = document.createElement("span");
 					label.textContent = FUEL_LABELS[item.type] || item.type;
+					const details = document.createElement("span");
+					details.className = "google-fuel-price-details";
 					const value = document.createElement("span");
 					value.textContent = item.price
 						? new Intl.NumberFormat("es-ES", { style: "currency", currency: item.price.currencyCode, maximumFractionDigits: 3 }).format(item.price.amount)
 						: "—";
-					row.append(label, value);
+					details.appendChild(value);
+					if (item.updateTime) {
+						const updated = document.createElement("span");
+						updated.className = "google-fuel-price-updated dimmed";
+						updated.textContent = new Intl.DateTimeFormat("es-ES", {
+							day: "2-digit",
+							month: "2-digit",
+						hour: "2-digit",
+						minute: "2-digit"
+						}).format(new Date(item.updateTime));
+						updated.title = "Última actualización del precio";
+						details.appendChild(updated);
+					}
+					row.append(label, details);
 					section.appendChild(row);
 				}
 			}

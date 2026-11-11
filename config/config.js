@@ -127,7 +127,7 @@ const config = {
 			config: {
 				latitude: 40.35263049999083,
 				longitude: -3.7022814781506397,
-				radiusMeters: 5000,
+				radiusMeters: 10000,
 				maxStations: 5,
 				updateInterval: 60 * 60 * 1000
 			}

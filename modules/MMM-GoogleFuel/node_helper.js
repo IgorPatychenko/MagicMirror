@@ -62,7 +62,7 @@ module.exports = NodeHelper.create({
 				},
 				body: JSON.stringify({
 					includedTypes: ["gas_station"],
-					maxResultCount: Math.min(Math.max(instance.config.maxStations || 5, 1), 20),
+					maxResultCount: 20,
 					rankPreference: "DISTANCE",
 					locationRestriction: {
 						circle: {
@@ -95,7 +95,13 @@ module.exports = NodeHelper.create({
 							updateTime: item.updateTime || null
 						}))
 				}))
-				.filter((station) => station.prices.some((item) => item.price));
+				.filter((station) => station.prices.some((item) => item.price))
+				.sort((a, b) => {
+					const aCheapest = Math.min(...a.prices.filter((item) => item.price).map((item) => item.price.amount));
+					const bCheapest = Math.min(...b.prices.filter((item) => item.price).map((item) => item.price.amount));
+					return aCheapest - bCheapest || a.name.localeCompare(b.name);
+				})
+				.slice(0, Math.min(Math.max(instance.config.maxStations || 5, 1), 20));
 			const data = { stations, checkedAt: new Date().toISOString() };
 			instance.lastData = data;
 			this.sendSocketNotification("GOOGLE_FUEL_DATA", { instanceId, data });
