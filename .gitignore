@@ -62,6 +62,8 @@ Temporary Items
 !/modules/MMM-MadridTraffic/**
 !/modules/MMM-GoogleTraffic/
 !/modules/MMM-GoogleTraffic/**
+!/modules/MMM-GoogleFuel/
+!/modules/MMM-GoogleFuel/**
 
 # Ignore users config files but keep the samples.
 config/config.env

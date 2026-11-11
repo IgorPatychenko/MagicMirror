@@ -121,6 +121,18 @@ const config = {
 			}
 		},
 		{
+			module: "MMM-GoogleFuel",
+			position: "bottom_left",
+			header: "Precios de combustible · Madrid",
+			config: {
+				latitude: 40.35263049999083,
+				longitude: -3.7022814781506397,
+				radiusMeters: 5000,
+				maxStations: 5,
+				updateInterval: 60 * 60 * 1000
+			}
+		},
+		{
 			module: "MMM-GoogleTraffic",
 			position: "bottom_left",
 			header: "Tráfico · Madrid",
