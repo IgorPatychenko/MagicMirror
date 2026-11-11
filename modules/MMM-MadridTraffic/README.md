@@ -5,15 +5,15 @@ Displays current Madrid street and traffic incidents, including roadworks, accid
 ## Configuration
 
 ```js
-{
-	module: "MMM-MadridTraffic",
-	position: "bottom_right",
-	header: "Avisos de tráfico · Madrid",
-	config: {
-		maximumEntries: 5,
-		updateInterval: 5 * 60 * 1000
-	}
-}
+const config = {
+  module: "MMM-MadridTraffic",
+  position: "bottom_right",
+  header: "Avisos de tráfico · Madrid",
+  config: {
+    maximumEntries: 5,
+    updateInterval: 5 * 60 * 1000
+  }
+};
 ```
 
 `maximumEntries` controls how many items are shown. `updateInterval` is in milliseconds and is clamped to at least one minute.

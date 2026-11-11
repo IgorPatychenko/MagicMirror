@@ -1,28 +1,28 @@
 .madrid-traffic {
-	width: 330px;
-	max-width: 330px;
+  width: 330px;
+  max-width: 330px;
 }
 
 .madrid-traffic-item {
-	margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .madrid-traffic-type {
-	font-size: 0.68em;
-	text-transform: uppercase;
+  font-size: 0.68em;
+  text-transform: uppercase;
 }
 
 .madrid-traffic-description {
-	max-width: 330px;
-	font-size: 0.72em;
-	line-height: 1.15;
+  max-width: 330px;
+  font-size: 0.72em;
+  line-height: 1.15;
 }
 
 .madrid-traffic-time,
 .madrid-traffic-source {
-	font-size: 0.58em;
+  font-size: 0.58em;
 }
 
 .madrid-traffic-source {
-	margin-top: 8px;
+  margin-top: 8px;
 }

@@ -5,16 +5,16 @@ Displays the European Air Quality Index (AQI) and pollutant estimates for Madrid
 ## Configuration
 
 ```js
-{
-	module: "MMM-MadridAirQuality",
-	position: "bottom_left",
-	header: "Calidad del aire · Madrid",
-	config: {
-		latitude: 40.4168,
-		longitude: -3.7038,
-		updateInterval: 20 * 60 * 1000
-	}
-}
+const config = {
+  module: "MMM-MadridAirQuality",
+  position: "bottom_left",
+  header: "Calidad del aire · Madrid",
+  config: {
+    latitude: 40.4168,
+    longitude: -3.7038,
+    updateInterval: 20 * 60 * 1000
+  }
+};
 ```
 
 `updateInterval` is in milliseconds and is clamped to at least one minute.
